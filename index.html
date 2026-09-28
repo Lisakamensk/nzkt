@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Производство композитной арматуры, сетки и армирующих элементов
+    </title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" type="image/x-icon" href="img/icons/logo.svg" />
+  </head>
+
+  <body>
+    <header>
+      <section class="company-info">
+        <div class="container">
+          <div class="company-info-wrapper">
+            <div class="logo">
+              <img src="img/icons/logo.svg" alt="ТД Нармида" />
+            </div>
+            <div class="company-location">
+              <div class="company-info-title">Расположение завода</div>
+              <div class="company-info-description">
+                <address class="company-info-address">
+                  <div class="company-info-city">
+                    <div>Санкт-Петербург</div>
+                    <button
+                      class="arrow-down"
+                      onclick="toggleDropdown()"
+                    ></button>
+                  </div>
+                  <div>ул. Предпортовая 6, к 14</div>
+                </address>
+                <div class="dropdown-contact">
+                  <div class="dropdown-contact-content">
+                    <a
+                      href="#"
+                      onclick="changeAddress('Москва', 'Красная площадь, 1')"
+                      >Москва</a
+                    >
+                    <a
+                      href="#"
+                      onclick="changeAddress('Ростов-на-Дону', 'ул. Любая, 1')"
+                      >Ростов-на-Дону</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="company-work-time">
+              <div class="company-info-title">Время работы</div>
+              <div class="company-info-description">
+                <time datetime="Mo-Fr 09:00-18:00">Пн.- Пт., 09:00—18:00</time>
+              </div>
+            </div>
+            <div class="contact-number">
+              <a href="tel:+788006001786"> 8 (800) 600-17-86 </a>
+              <button
+                id="callOrderButtonIcon"
+                type="button"
+                class="contact-number-call desktop-hide"
+                onclick="showCallOrderModal()"
+              >
+                <img src="img/icons/phone.svg" alt="Phone" />
+              </button>
+              <button
+                id="callOrderButton"
+                type="button"
+                class="call-order-button"
+                onclick="showCallOrderModal()"
+              >
+                Заказать звонок
+              </button>
+            </div>
+            <button
+              class="mobile-menu-toggle desktop-hide"
+              onclick="toggleMobileMenu()"
+            >
+              ☰
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="navigation">
+        <div class="container">
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="#">
+                  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                  <button class="menu-toggle-mobile"></button>
+                  Наша продукция</a
+                >
+                <ul class="menu-item-dropdown">
+                  <li><a href="#">Композитная арматура</a></li>
+                  <li><a href="#">Композитная сетка</a></li>
+                  <li><a href="#">Гнутые композитные элементы</a></li>
+                  <li><a href="#">Гибкие композитные связи</a></li>
+                  <li><a href="#">Гидроизаляционные смеси</a></li>
+                  <li><a href="#">Фиксаторы арматуры</a></li>
+                  <li><a href="#">Композитные профильные изделия</a></li>
+                  <li><a href="#">Фибра стеклопластик и базальт</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Акции</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Оборудование</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Партнерам</a>
+              </li>
+              <li class="menu-item">
+                <a href="#"> О заводе</a>
+                <ul class="menu-item-dropdown about-dropdown">
+                  <li><a href="#">История успеха</a></li>
+                  <li><a href="#">Документация</a></li>
+                  <li><a href="#">Блог</a></li>
+                  <li><a href="#">Видеоотзывы</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Всплывающая навигация -->
+      <section class="extra-navigation">
+        <div class="container">
+          <nav class="menu-extra">
+            <ul class="menu-list-extra">
+              <li class="menu-item-extra">
+                <a href="#">Композитная арматура</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li><a href="#">Стеклопластиковая арматура</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура стеклопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                  <li><a href="#">Арматура базальтопластиковая</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура базальтопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Композитная сетка</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li>
+                    <a href="#">Стеклопластиковая сетка ГОСТ Р 58964-2020</a>
+                  </li>
+                  <li><a href="#">Базальтовая сетка ГОСТ Р 58964-2020</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Гнутые композитные элементы</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li><a href="#">Стеклопластиковая арматура</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура стеклопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                  <li><a href="#">Арматура базальтопластиковая</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура базальтопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Гибкие композитные связи</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li>
+                    <a href="#">Гибкие связи стеклопластиковые и базальтовые</a>
+                  </li>
+                  <li><a href="#">Гибкие связи анкер с утолщением</a></li>
+                  <li><a href="#">Гибкие связи с песчаным покрытием</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Гидроизаляционные смеси</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li><a href="#">Стеклопластиковая арматура</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура стеклопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                  <li><a href="#">Арматура базальтопластиковая</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура базальтопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Фиксаторы арматуры</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li>
+                    <a href="#">Стеклопластиковая сетка ГОСТ Р 58964-2020</a>
+                  </li>
+                  <li><a href="#">Базальтовая сетка ГОСТ Р 58964-2020</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Композитные профильные изделия</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li><a href="#">Стеклопластиковая арматура</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура стеклопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                  <li><a href="#">Арматура базальтопластиковая</a></li>
+                  <li>
+                    <a href="#"
+                      >Арматура базальтопластиковая с песчаным покрытием</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-extra">
+                <a href="#">Фибра стеклопластик и базальт</a>
+                <ul class="menu-item-dropdown-extra">
+                  <li>
+                    <a href="#">Гибкие связи стеклопластиковые и базальтовые</a>
+                  </li>
+                  <li><a href="#">Гибкие связи анкер с утолщением</a></li>
+                  <li><a href="#">Гибкие связи с песчаным покрытием</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- Модальное окно -->
+      <div id="callOrderModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <p>Заказать звонок</p>
+          <div id="orderForm">
+            <form id="callOrderForm">
+              <label for="phone">Ваш номер телефона:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (___) ___ --"
+                required
+              />
+              <input type="submit" value="Отправить" />
+            </form>
+          </div>
+          <div id="thankYouMessage" style="display: none">
+            Спасибо. Мы вам позвоним в ближайший час.
+          </div>
+        </div>
+      </div>
+
+      <section class="slider">
+        <div class="container">
+          <div class="slides">
+            <div class="slide" id="slide1">
+              <div class="slide-content-wrapper">
+                <div class="slide-content">
+                  <div class="slide-title">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  </div>
+                  <div class="slide-offer">
+                    <div class="slide-offer-title">Lorem, ipsum dolor</div>
+                    <div class="slide-offer-content">
+                      <p>Lorem ipsum dolor sit amet.</p>
+                      <div class="slide-offer-details">
+                        <div class="slide-offer-sizes">
+                          <img
+                            src="img/icons/diameter.svg"
+                            alt="Значок диаметра"
+                          />
+                          <span>от 2мм / 50х50</span>
+                        </div>
+                        <a href="#" class="slide-offer-button"
+                          >Lorem, ipsum dolor.</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-img-wrapper">
+                  <img
+                    class="slide-img"
+                    src="img/slider/slide-img-2.png"
+                    alt="Изображение в слайде"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="slide" id="slide2">
+              <div class="slide-content-wrapper">
+                <div class="slide-content">
+                  <h1 class="slide-title">
+                    Производство композитной арматуры, сетки и армирующих
+                    элементов
+                  </h1>
+                  <div class="slide-offer">
+                    <div class="slide-offer-title">Специальное предложение</div>
+                    <div class="slide-offer-content">
+                      <p>Композитная сетка стеклопластиковая и базальтовая</p>
+                      <div class="slide-offer-details">
+                        <div class="slide-offer-sizes">
+                          <img
+                            src="img/icons/diameter.svg"
+                            alt="Значок диаметра"
+                          />
+                          <span>от 2мм / 50х50</span>
+                        </div>
+                        <a href="#" class="slide-offer-button"
+                          >Перейти в каталог</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-img-wrapper">
+                  <img
+                    class="slide-img"
+                    src="img/slider/slide-img-1.png"
+                    srcset="img/slider/slide-img-1@2x.png 2x"
+                    alt="Изображение в слайде"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="slide" id="slide3">
+              <div class="slide-content-wrapper">
+                <div class="slide-content">
+                  <div class="slide-title">Lorem ipsum dolor sit amet.</div>
+                  <div class="slide-offer">
+                    <div class="slide-offer-title">
+                      Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="slide-offer-content">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <div class="slide-offer-details">
+                        <div class="slide-offer-sizes">
+                          <img
+                            src="img/icons/diameter.svg"
+                            alt="Значок диаметра"
+                          />
+                          <span>от 2мм / 50х50</span>
+                        </div>
+                        <a href="#" class="slide-offer-button"
+                          >Lorem, ipsum dolor.</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-img-wrapper">
+                  <img
+                    class="slide-img"
+                    src="img/slider/slide-img-3.png"
+                    alt="Изображение в слайде"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-prev">&#10094;</button>
+            <div class="slider-dots">
+              <span class="slider-dot" onclick="goToSlide(0)"></span>
+              <span class="slider-dot" onclick="goToSlide(1)"></span>
+              <span class="slider-dot" onclick="goToSlide(2)"></span>
+            </div>
+            <button class="slider-next">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-products">
+        <div class="container">
+          <h2>Наша продукция</h2>
+          <div class="products">
+            <div class="product-item">
+              <a href="#">
+                <p>Композитная арматура</p>
+                <img
+                  src="img/products/kompozitnaya-armatura.png"
+                  srcset="img/products/kompozitnaya-armatura@2x.png 2x"
+                  alt="Композитная арматура"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Композитная и базальтовая сетка</p>
+                <img
+                  src="img/products/kompozitnaya-i-bazaltovaya-setka.png"
+                  srcset="
+                    img/products/kompozitnaya-i-bazaltovaya-setka@2x.png 2x
+                  "
+                  alt="Композитная и базальтовая сетка"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Гнутые композитные элементы</p>
+                <img
+                  src="img/products/gnutye-kompozitnye-ehlementy.png"
+                  srcset="img/products/gnutye-kompozitnye-ehlementy@2x.png 2x"
+                  alt="Гнутые композитные элементы"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Гибкие композитные связи</p>
+                <img
+                  src="img/products/gibkie-kompozitnye-svyazi.png"
+                  srcset="img/products/gibkie-kompozitnye-svyazi@2x.png 2x"
+                  alt="Гибкие композитные связи"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Гидро-изаляционные смеси</p>
+                <img
+                  src="img/products/gidro-izalyacionnye-smesi.png"
+                  srcset="img/products/gidro-izalyacionnye-smesi@2x.png 2x"
+                  alt="Гидро-изаляционные смеси"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Фиксаторы арматуры</p>
+                <img
+                  src="img/products/fiksatory-armatury.png"
+                  srcset="img/products/fiksatory-armatury@2x.png 2x"
+                  alt="Фиксаторы арматуры"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Композитные профильные изделия</p>
+                <img
+                  src="img/products/kompozitnye-profilnye-izdeliya.png"
+                  srcset="img/products/kompozitnye-profilnye-izdeliya@2x.png 2x"
+                  alt="Композитные профильные изделия"
+                />
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <p>Фибра стеклопластик и базальтовая</p>
+                <img
+                  src="img/products/fibra-stekloplastik-i-bazaltovaya.png"
+                  srcset="
+                    img/products/fibra-stekloplastik-i-bazaltovaya@2x.png 2x
+                  "
+                  alt="Фибра стеклопластик и базальтовая"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-container">
+        <div class="container">
+          <div class="video__overlay js-video-btn">
+            <div class="video-prompt">
+              <div class="prompt-text">
+                <p>Посмотрите видеоролик о нашем производстве</p>
+              </div>
+              <div class="video-preloader">
+                <div class="video-preloader-img">
+                  <img
+                    src="img/icons/preloader-circle-1.svg"
+                    alt="Loader Line 1"
+                    class="background-img"
+                  />
+                  <img
+                    src="img/icons/preloader-circle-2.svg"
+                    alt="Loader Line 2"
+                    class="foreground-img"
+                  />
+                  <img
+                    src="img/icons/preloader-arrow.svg"
+                    alt="Play"
+                    class="preloader-arrow"
+                    id="preloader-arrow"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <video class="js-video" muted>
+            <source src="video/video-example.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section class="offers">
+        <div class="container">
+          <h2>Уникальные предложения</h2>
+          <div class="offers-wrapper">
+            <div class="offer-item">
+              <div class="offer-item-info">
+                <h3>Нашли продукцию дешевле?</h3>
+                <p>Мы сделаем скидку!</p>
+                <a href="#" class="offer-item-button"
+                  >Оставьте заявку на скидку</a
+                >
+              </div>
+              <div class="offer-item-img">
+                <img
+                  src="img/banners/banner-1.png"
+                  srcset="img/banners/banner-1@2x.png 2x"
+                  alt="Banner"
+                />
+              </div>
+            </div>
+            <div class="offer-item offer-item-color">
+              <div class="offer-item-info">
+                <h3>Производство своими глазами</h3>
+                <p>Хотите экскурсию?</p>
+                <a href="#" class="offer-item-button"
+                  >Хочу пойти на экскурсию</a
+                >
+              </div>
+              <div class="offer-item-img">
+                <img
+                  src="img/banners/banner-2.png"
+                  srcset="img/banners/banner-2@2x.png 2x"
+                  alt="Banner"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-announcement">
+        <div class="container">
+          <div class="company-news">
+            <h2>Новости компании</h2>
+            <a href="#">Все новости</a>
+          </div>
+          <div class="news-announcements-wrapper">
+            <div class="news-announcement-item">
+              <div class="news-announcement-img">
+                <time datetime="2088-10-15" class="news-date">15.10.2088</time>
+                <img
+                  src="img/news/new-announcement-1.jpg"
+                  srcset="img/news/new-announcement-1@2x.png 2x"
+                  alt="Изображение анонса новости"
+                />
+              </div>
+              <div class="news-announcement-title">
+                <a href="#"
+                  >Композитная арматура федерального уровня — от НЗК</a
+                >
+              </div>
+            </div>
+            <div class="news-announcement-item">
+              <div class="news-announcement-img">
+                <time datetime="2088-10-15" class="news-date">15.10.2088</time>
+                <img
+                  src="img/news/new-announcement-2.jpg"
+                  srcset="img/news/new-announcement-2@2x.png 2x"
+                  alt="Изображение анонса новости"
+                />
+              </div>
+              <div class="news-announcement-title">
+                <a href="#"
+                  >Композитная арматура федерального уровня — от НЗК</a
+                >
+              </div>
+            </div>
+            <div class="news-announcement-item">
+              <div class="news-announcement-img">
+                <time datetime="2088-10-15" class="news-date">15.10.2088</time>
+                <img
+                  src="img/news/new-announcement-3.jpg"
+                  srcset="img/news/new-announcement-3@2x.png 2x"
+                  alt="Изображение анонса новости"
+                />
+              </div>
+              <div class="news-announcement-title">
+                <a href="#"
+                  >Композитная арматура федерального уровня — от НЗК</a
+                >
+              </div>
+            </div>
+            <div class="news-announcement-item">
+              <div class="news-announcement-img">
+                <time datetime="2088-10-15" class="news-date">15.10.2088</time>
+                <img
+                  src="img/news/new-announcement-4.jpg"
+                  srcset="img/news/new-announcement-4@2x.png 2x"
+                  alt="Изображение анонса новости"
+                />
+              </div>
+              <div class="news-announcement-title">
+                <a href="#"
+                  >Композитная арматура федерального уровня — от НЗК</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="customers">
+        <div class="container">
+          <div class="customers-wrapper">
+            <div class="customers-nav">
+              <button>Партнеры</button>
+              <button>Отзывы</button>
+              <button>Контакты</button>
+            </div>
+            <div class="customers-items">
+              <div class="partners">
+                <div class="partner-item">
+                  <img
+                    src="img/partners/gazprom.png"
+                    srcset="img/partners/gazprom@2x.png 2x"
+                    alt="Газпром"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/lukoil.png"
+                    srcset="img/partners/lukoil@2x.png 2x"
+                    alt="Лукойл"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/tatneft.png"
+                    srcset="img/partners/tatneft@2x.png 2x"
+                    alt="Tatneft"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/rosatom.png"
+                    srcset="img/partners/rosatom@2x.png 2x"
+                    alt="Росатом"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/tekhnonikol.png"
+                    srcset="img/partners/tekhnonikol@2x.png 2x"
+                    alt="Технониколь"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/rusnano.png"
+                    srcset="img/partners/rusnano@2x.png 2x"
+                    alt="Роснано"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/sibur.png"
+                    srcset="img/partners/sibur@2x.png 2x"
+                    alt="Сибур"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="img/partners/rosneft.png"
+                    srcset="img/partners/rosneft@2x.png 2x"
+                    alt="Роснефть"
+                  />
+                </div>
+              </div>
+              <div class="reviews">
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+                <div class="review-item">
+                  <img src="img/icons/avatar-review.png" alt="Имя Фамилия" />
+                  <div class="review-content">
+                    <p class="review-text">
+                      Отзыв клиента о вашей компании или продукте. Можно
+                      добавить цитату здесь.
+                    </p>
+                    <span class="review-author">Имя Фамилия</span>
+                  </div>
+                </div>
+              </div>
+              <div class="customers-contacts">
+                <div class="customers-contact-item">
+                  <span class="location-icon"></span>
+                  <address>123456, Москва, ул. Примерная, д. 10</address>
+                </div>
+                <div class="customers-contact-item">
+                  <span class="phone-icon"></span>
+                  <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                </div>
+                <div class="customers-contact-item">
+                  <span class="email-icon"></span>
+                  <a href="mailto:info@example.com">info@example.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-network">
+        <h4 class="social-network-title">Мы в социальных медиа</h4>
+        <div class="social-icons">
+          <div class="social-icons-item">
+            <img src="img/icons/vkontakte.svg" alt="Вконтакте" />
+          </div>
+          <div class="social-icons-item">
+            <img src="img/icons/facebook.svg" alt="Facebook" />
+          </div>
+          <div class="social-icons-item">
+            <img src="img/icons/twitter.svg" alt="Twitter" />
+          </div>
+          <div class="social-icons-item">
+            <img src="img/icons/instagram.svg" alt="Instagram" />
+          </div>
+          <div class="social-icons-item">
+            <img src="img/icons/youtube.svg" alt="YouTube" />
+          </div>
+          <div class="social-icons-item">
+            <img src="img/icons/google.svg" alt="Google" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-nav-wrapper">
+            <div class="footer-nav-item">
+              <h4>Навигация</h4>
+              <div class="footer-nav">
+                <a href="#">Главная</a>
+                <a href="#">О заводе</a>
+                <a href="#">Оборудование</a>
+                <a href="#">Наша продукция</a>
+                <a href="#">Документы</a>
+                <a href="#">Арматура</a>
+                <a href="#">Доставка</a>
+                <a href="#">Контакты</a>
+              </div>
+            </div>
+            <div class="footer-nav-item">
+              <h4>Продукция</h4>
+              <div class="footer-nav">
+                <a href="#">Композитная арматура</a>
+                <a href="#">Композитная сетка</a>
+                <a href="#">Гнутые композитные элементы</a>
+                <a href="#">Гибкие композитные связи</a>
+                <a href="#">Гидроизоляционные смеси</a>
+                <a href="#">Фиксаторы арматуры</a>
+                <a href="#">Композитные профильные изделия</a>
+                <a href="#">Фибра стеклопластиковая и базальтовая</a>
+              </div>
+            </div>
+            <div class="footer-nav-item footer-nav-item-column">
+              <h4>Склады в РФ:</h4>
+              <div class="footer-nav">
+                <a href="#">Нижний Новгород</a>
+                <a href="#">Москва</a>
+                <a href="#">Санкт-Петербург</a>
+                <a href="#">Ростов на дону</a>
+              </div>
+              <div class="footer-nav-note">
+                Перед посещением склада обязательно свяжитесь с нашим менеджером
+                по телефону
+              </div>
+            </div>
+          </div>
+          <div class="footer-contacts-wrapper">
+            <div class="contact-number">
+              <a href="tel:+788006001786">8 (800) 600-17-86</a>
+              <button
+                id="callOrderButton"
+                type="button"
+                class="call-order-button"
+                onclick="showCallOrderModal()"
+              >
+                Заказать звонок
+              </button>
+            </div>
+            <div class="footer-contacts-address">
+              <h4>Центральный офис</h4>
+              <address>г. Нижний Новгород, ул. Маршала Казакова, 3А</address>
+            </div>
+            <div class="footer-contacts-email">
+              <a href="mailto:info@nzkt.ru">info@nzkt.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-number-footer desktop-hide">
+        <div class="logo">
+          <img src="img/icons/logo.svg" alt="ТД Нармида" />
+        </div>
+        <div class="contact-number">
+          <a href="tel:+788006001786"> 8 (800) 600-17-86 </a>
+          <button
+            id="callOrderButtonIcon"
+            type="button"
+            class="contact-number-call desktop-hide"
+            onclick="showCallOrderModal()"
+          >
+            <img src="img/icons/phone.svg" alt="Phone" />
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <img src="img/icons/footer-logo.svg" alt="Компания “ТД Нармида” " />
+        <p>
+          Компания “ТД Нармида” является единственным торговым представителем
+          завода НЗК
+        </p>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
